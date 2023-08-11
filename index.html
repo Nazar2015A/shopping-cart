@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>shop card</title>
+	<link rel="stylesheet" href="libs/modal/modal.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="libs/nouislider.min.css">
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<nav class="header__nav nav">
+				<ul class="nav__list">
+					<li class="nav__item"><a href="" class="nav__link">Каталог</a></li>
+					<li class="nav__item"><a href="" class="nav__link">Акції</a></li>
+					<li class="nav__item"><a href="" class="nav__link">Оплата і доставка</a></li>
+					<li class="nav__item"><a href="" class="nav__link">Работа в компанії</a></li>
+					<li class="nav__item"><a href="" class="nav__link">Контакти</a></li>
+				</ul>
+				<div class="header__cart cart" tabindex="0">
+					<div class="cart__text">
+						Корзина
+						<span class="cart__quantity">0</span>
+					</div>
+					<div class="cart-content">
+						<ul class="cart-content__list" data-simplebar>
+						</ul>
+						<div class="cart-content__bottom">
+							<div class="cart-content__fullprice">
+								<span>Всього:</span>
+								<span class="fullprice">568 789 ₴</span>
+							</div>
+							<button class="cart-content__btn btn" data-graph-path="modal" data-graph-animation="fadeInUp">Перейти в корзину</button>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<main class="content">
+		<div class="container">
+			<div class="products-content grid-container">
+				<div class="filters">
+					<div class="filters__item filters-price">
+						<h3 class="filters-price__title">Цiна</h3>
+						<div class="filters-price__slider" id="range-slider"></div>
+						<div class="filters-price__inputs">
+							<label class="filters-price__label">
+								<span class="filters-price__text">від</span>
+								<input type="number" min="500" max="999999" placeholder="500" class="filters-price__input" id="input-0">
+								<span class="filters-price__text">₴</span>
+							</label>
+							<label class="filters-price__label">
+								<span class="filters-price__text">до</span>
+								<input type="number" min="500" max="999999" placeholder="999999" class="filters-price__input" id="input-1">
+								<span class="filters-price__text">₴</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<ul class="products-grid">
+				</ul>
+			</div>
+			<div class="height"></div>
+		</div>
+	</main>
+	<div class="modal">
+		<div class="modal__container order-modal" role="dialog" aria-modal="true" data-graph-target="modal">
+			<div class="modal-content order-modal__content">
+				<div class="order-modal__top">
+					<h2 class="order-modal__title">Оформлення замовлення</h2>
+					<span class="order-modal__number">Заказ № 3456 67</span>
+					<div class="close__modal">X</div>
+				</div>
+				<div class="order-modal__info">
+					<div class="order-modal__quantity order-modal__info-item">Товарів в замовленні: <span>3 шт</span></div>
+					<div class="order-modal__summ order-modal__info-item">Загальна сумма замовлення: <span>568 789 ₴</span></div>
+					<div class="order-modal__products order-modal__info-item">
+						<button class="order-modal__btn">Склад замовлення</button>
+						<ul class="order-modal__list">
+							
+						</ul>
+					</div>
+				</div>
+				<form action="#" class="order-modal__form order">
+					<input type="hidden" name="theme" value="Дзвінок">
+					<input type="hidden" name="admin_email[]" value="nazar.komar567@gmail.com">
+					<input type="hidden" name="form_subject" value="Заявка з сайта Сайт">
+					<label class="order__label">
+						<span class="order__text">Ваше iм'я</span>
+						<input type="text" name="Имя" class="order__input">
+					</label>
+					<label class="order__label">
+						<span class="order__text">Номер телефона</span>
+						<input type="tel" name="Телефон" class="order__input" placeholder="+38 (___)__-__-___">
+					</label>
+					<label class="order__label">
+						<span class="order__text">Ваше iм'я</span>
+						<input type="email" name="Email" class="order__input" placeholder="post@gmail.com">
+					</label>
+					<button class="order__btn btn">Оформити замовлення</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="js/data.js"></script>
+	<script src="js/simplebar.js"></script>
+	<script src="libs/nouislider.min.js"></script>
+	<script src="libs/modal/modal.js"></script>
+	<script src="js/product.js"></script>
+	<script src="js/fixed-block.js"></script>
+	<script src="js/cart.js"></script>
+	<script src="js/range-slider.js"></script>
+</body>
+</html>
